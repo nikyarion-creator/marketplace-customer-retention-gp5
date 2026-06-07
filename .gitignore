@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.python-version
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data & models (heavy artifacts — keep folders, ignore contents)
+data/*
+!data/.gitkeep
+models/*
+!models/.gitkeep
+
+# Experiment tracking
+mlruns/
+wandb/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/

@@ -51,19 +51,3 @@ def make_offer(risk, sentiment=None, favorite_category=None, avg_order_value=Non
             msg = f'Рекомендуем новинки в «{cat}».'
 
     return {'offer_type': offer, 'risk_level': level, 'discount_pct': discount, 'message': msg}
-
-
-# проверяю на нескольких клиентах из разных ситуаций
-if __name__ == '__main__':
-    clients = [
-        {'risk': 0.85, 'sentiment': 'negative', 'favorite_category': 'cama_mesa_banho', 'avg_order_value': 120},
-        {'risk': 0.78, 'sentiment': 'positive', 'favorite_category': 'informatica_acessorios', 'avg_order_value': 350},
-        {'risk': 0.45, 'sentiment': None, 'favorite_category': 'beleza_saude', 'avg_order_value': 90},
-        {'risk': 0.15, 'sentiment': 'positive', 'favorite_category': 'esporte_lazer', 'avg_order_value': 200},
-    ]
-
-    for c in clients:
-        o = make_offer(**c)
-        print(o['offer_type'], '| риск', o['risk_level'], '| скидка', o['discount_pct'], '%')
-        print(o['message'])
-        print()
